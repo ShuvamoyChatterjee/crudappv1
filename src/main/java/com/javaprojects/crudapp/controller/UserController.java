@@ -24,6 +24,7 @@ public class UserController {
 
     @GetMapping("/hello/{userName}")
     public ResponseEntity<String> getAppHealth(@PathVariable String userName){
+        log.info("Application running...");
         return new ResponseEntity<>(String.format("Hello %s App running", userName),HttpStatus.OK);
     }
 
